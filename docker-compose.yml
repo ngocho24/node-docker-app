@@ -1,0 +1,5 @@
+services:
+  web:
+    image: elijahngocho/my-node-app  # ← Your Docker Hub image
+    ports:
+      - "3000:3000"
