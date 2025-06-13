@@ -1,13 +1,19 @@
-# Node.js Dockerized App  
+# Node.js Docker Deployment Project 🚀
 
-A simple Node.js app containerized with Docker.  
+[![Live Deployment](https://img.shields.io/badge/Render-Live%20Demo-%2300CCB1)](https://node-docker-app-zkht.onrender.com)
+[![Docker Ready](https://img.shields.io/badge/Docker-Containerized-%232496ED)](https://hub.docker.com/)
 
-## Features  
-- Express.js server  
-- Dockerized deployment  
-- Ready for AWS/CI/CD  
+A professional-grade Node.js application demonstrating Docker containerization and cloud deployment.
 
-## How to Run  
+## Features ✨
+- 🏗️ Express.js web server
+- 🐳 Docker containerization
+- ☁️ Live cloud deployment
+- 🔄 CI/CD-ready architecture
+- 📦 AWS-compatible configuration
+
+## Quick Start ▶️
 ```bash
+# Build and run locally
 docker build -t my-node-app .
 docker run -p 3000:3000 my-node-app
