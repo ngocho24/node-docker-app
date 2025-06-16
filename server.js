@@ -1,11 +1,14 @@
-const express = require('express');
-const app = express();
-const PORT = 3000;
-
-app.get('/', (req, res) => {
-  res.send('Hello from Docker!');
+const { Pool } = require('pg');
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+// Example: Save a message to the database
+app.post('/messages', async (req, res) => {
+  const { text } = req.body;
+  const result = await pool.query(
+    'INSERT INTO messages (text) VALUES ($1) RETURNING *',
+    [text]
+  );
+  res.json(result.rows[0]);
 });
